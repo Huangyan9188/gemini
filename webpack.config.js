@@ -2,8 +2,8 @@ var path = require('path');
 
 module.exports = {
     entry: {
-       // app: "./src/app/app.js",
-        lib: "./src/app/lib.js"
+        app: "./src/app/app.js",
+        lib: "./src/app/lib.js",
     },
 
     output: {

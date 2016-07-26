@@ -56,8 +56,8 @@ gulp.task('clean-js', function(){
  * webpack 编译
  */
 gulp.task('webpack', ['clean-js'], function(cb){
-    // return gulp.src(js_src_path+'(app|lib).js')
-        return gulp.src(js_src_path+'lib.js')
+     return gulp.src(js_src_path+'(app|lib).js')
+    //    return gulp.src(js_src_path+'lib.js')
         .pipe(gulpwebpack( require('./webpack.config.js') ))
         .pipe(gulp.dest(js_path))
 });
@@ -66,8 +66,8 @@ gulp.task('webpack', ['clean-js'], function(cb){
  * 压缩js
  */
 gulp.task('js', ['webpack'], function(){
-    // return gulp.src(js_path+'(app|lib).js')
-    return gulp.src(js_path+'lib.js')
+     return gulp.src(js_path+'(app|lib).js')
+    //return gulp.src(js_path+'lib.js')
         // .pipe(jshint())
         // .pipe(uglify())
         .pipe(rename({suffix: ".min"}))
